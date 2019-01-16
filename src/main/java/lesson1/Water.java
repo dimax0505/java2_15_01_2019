@@ -1,10 +1,10 @@
 package lesson1;
 
-public class Water extends Obstacle {
+class Water extends Obstacle {
 
     private int dist;
 
-    public Water(int dist) {
+    Water(int dist) {
         this.dist = dist;
     }
 

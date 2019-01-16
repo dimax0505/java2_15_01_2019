@@ -10,7 +10,7 @@ public class Animal implements Competitor {
 
     private boolean onDistance = true;
 
-    public Animal(String name, String color, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
+    Animal(String name, String color, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
         this.name = name;
         this.color = color;
         this.maxRunDistance = maxRunDistance;

@@ -1,7 +1,7 @@
 package lesson1;
 
-public class Dog extends Animal {
-    public Dog(String name, String color, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
+class Dog extends Animal {
+    Dog(String name, String color, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
         super(name, color, maxRunDistance, maxSwimDistance, maxJumpHeight);
     }
 }

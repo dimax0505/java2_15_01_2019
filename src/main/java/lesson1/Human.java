@@ -9,7 +9,7 @@ public class Human implements Competitor {
 
     private boolean onDistance = true;
 
-    public Human(String name, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
+    Human(String name, int maxRunDistance, int maxSwimDistance, int maxJumpHeight) {
         this.name = name;
         this.maxRunDistance = maxRunDistance;
         this.maxSwimDistance = maxSwimDistance;

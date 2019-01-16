@@ -1,9 +1,9 @@
 package lesson1;
 
-public class Road extends Obstacle {
+class Road extends Obstacle {
     private int dist;
 
-    public Road(int dist) {
+    Road(int dist) {
         this.dist = dist;
     }
 
