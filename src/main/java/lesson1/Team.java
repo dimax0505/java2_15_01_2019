@@ -4,13 +4,13 @@ class Team {
     private Competitor[] competitors;
 
     Team(Competitor ... competitors) {
-        this.competitors = new Competitor[competitors.length];
-        init(competitors);
+        this.competitors = competitors;
+       // init(competitors);
     }
 
-    private void init(Competitor[] competitors){
-        System.arraycopy(competitors, 0, this.competitors, 0, competitors.length);
-    }
+//    private void init(Competitor[] competitors){
+//        System.arraycopy(competitors, 0, this.competitors, 0, competitors.length);
+//    }
 
     void showResult() {
         System.out.println("Участники команды:");
