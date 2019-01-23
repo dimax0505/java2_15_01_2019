@@ -8,7 +8,7 @@ public class Main {
                 {"1", "2", "3", "4"},
                 {"6", "7", "8", "9"},
                 {"11", "12", "kjg", "14"},
-                {"16", "17", "18", "19"},
+                {"16", "18", "19"},
         };
         // создаем объект класса майн для манипуляций
         Main m = new Main();
@@ -21,7 +21,7 @@ public class Main {
     }
 // метод подсчета суммы элементов массива
     private int summArrayFromString(String[][] arr) throws MySyzeArrayExeption, MyDataArrayExeption {
-        if (arr.length != 4 || arr[0].length != 4) //выбрасываем исключение неправильного размера массива
+        if (!isSyze(arr)) //выбрасываем исключение неправильного размера массива
             throw new MySyzeArrayExeption();
         int summ = 0;
         for (int i = 0; i < arr.length; i++)
@@ -33,4 +33,10 @@ public class Main {
                 }                                       // индексы
         return summ;
     }
-}
+    private boolean isSyze (String[][] arr){
+        if(arr.length !=4)return false;
+        for (String[] arrL2: arr) if (arrL2.length!=4)return false;
+         return true;
+        }
+    }
+
