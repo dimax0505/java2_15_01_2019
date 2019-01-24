@@ -4,13 +4,21 @@ import java.util.*;
 
 public class MainLesson3 {
 
-    private static String str = "lorem ipsum dolor sit amet consectetur adipiscing " +
-            "elit ipsum quis sapien sit nunc efficitur velit at neque " +
-            "feugiat eget ipsum";
-
     public static void main(String[] args) {
+        String str = "lorem ipsum dolor sit amet consectetur adipiscing " +
+                "elit ipsum quis sapien sit nunc efficitur velit at neque " +
+                "feugiat eget ipsum";
         System.out.println(uniqString(str));
         System.out.println(countString(str));
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Иванов", "9800123456789");
+        phoneBook.add("Петров", "9800987654321");
+        System.out.println(phoneBook.showAll());
+        System.out.println(phoneBook.get("Иванов"));
+        phoneBook.add("Иванов", "111111111111");
+        System.out.println(phoneBook.showAll());
+        System.out.println(phoneBook.get("Иванов"));
+        System.out.println(phoneBook.get("Петров"));
     }
 
     //метод подсчета вхождений каждого слова
