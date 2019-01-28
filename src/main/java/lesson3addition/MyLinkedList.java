@@ -21,9 +21,10 @@ public class MyLinkedList implements MyList {
     public boolean contains(String o) {
         iteratorToHead();
         while (hasNext(this.iterator)) {
-            if (iterator.getValue().equals(o)) return true;
+            if (this.iterator.getValue().equals(o)) return true;
             else this.iterator = this.iterator.getNext();
         }
+        if (this.iterator.getValue().equals(o)) return true;
         return false;
     }
 
@@ -46,19 +47,19 @@ public class MyLinkedList implements MyList {
     @Override
     public boolean remove(String o) {
         if (this.contains(o)) {
-            if (hasNext(iterator) && iterator != nodeHead) {
-                iterator.getPrevious().setNext(iterator.getNext());
-                iterator.getNext().setPrevious(iterator.getPrevious());
+            if (hasNext(this.iterator) && this.iterator != nodeHead) {
+                this.iterator.getPrevious().setNext(this.iterator.getNext());
+                this.iterator.getNext().setPrevious(this.iterator.getPrevious());
                 size--;
                 iterator = nodeHead;
                 return true;
-            } else if (iterator == nodeHead) {
-                iterator.getNext().setPrevious(null);
+            } else if (this.iterator == nodeHead) {
+                this.iterator.getNext().setPrevious(null);
                 nodeHead = iterator.getNext();
                 iterator = nodeHead;
                 return true;
             } else {
-                iterator.getPrevious().setNext(null);
+                this.iterator.getPrevious().setNext(null);
                 iterator = nodeHead;
                 return true;
             }

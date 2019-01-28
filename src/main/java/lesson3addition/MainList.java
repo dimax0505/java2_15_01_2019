@@ -37,9 +37,9 @@ public class MainList {
         myListLink.add("U");
         System.out.println(myListLink);
         System.out.println("элементов в списке - " + myListLink.size());
-        System.out.println("Содержит ли лист значение С - " + myListLink.contains("C"));
+        System.out.println("Содержит ли лист значение U - " + myListLink.contains("U"));
         System.out.println("Содержит ли лист значение 7 - " + myListLink.contains("7"));
-        myListLink.remove("D");
+        myListLink.remove("U");
         System.out.println(myListLink);
         System.out.println("элемент с индексом 6 -  " + myListLink.get(6));
         myListLink.set(5,"Change");
