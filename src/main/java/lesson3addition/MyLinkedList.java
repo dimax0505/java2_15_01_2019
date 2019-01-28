@@ -24,8 +24,7 @@ public class MyLinkedList implements MyList {
             if (this.iterator.getValue().equals(o)) return true;
             else this.iterator = this.iterator.getNext();
         }
-        if (this.iterator.getValue().equals(o)) return true;
-        return false;
+        return this.iterator.getValue().equals(o);
     }
 
     @Override
